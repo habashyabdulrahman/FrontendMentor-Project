@@ -38,10 +38,12 @@ ul {
     }
 
     .hero {
+        margin-bottom: 20px;
         h1 {
             font-size: 55px;
             font-family: "Young Serif",
                 serif;
+                margin-bottom: 20px;
         }
 
         p {
@@ -202,10 +204,8 @@ ul {
                 margin: -24px -24px 24px -24px;
             }
         .hero {
-            margin-bottom: 20px;
             h1 {
                 font-size: 30px;
-                margin-bottom: 20px;
             }
         }
     }
