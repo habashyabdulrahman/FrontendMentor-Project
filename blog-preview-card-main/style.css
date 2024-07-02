@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+    --Yellow: hsl(47, 88%, 63%);
+    --White: hsl(0, 0%, 100%) ;
+    --Grey: hsl(0, 0%, 50%) ;
+    --Black: hsl(0, 0%, 7%);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--Yellow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: "Figtree", sans-serif;
+}
+
+.container {
+    width: 384px;
+    background: var(--White);
+    border-radius: 20px;
+    border: 1px solid var(--Black);
+    box-shadow: 8px 8px var(--Black);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px;
+
+    img {
+        border-radius: 10px;
+    }
+
+    .content {
+        display: flex;
+        align-items: self-start;
+        gap: 12px;
+        flex-direction: column;
+
+        span {
+            font-size: 14px;
+            font-weight: 800;
+            background-color: var(--Yellow);
+            padding: 4px 12px;
+            border-radius: 4px;
+        }
+
+        h2 {
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: 800;
+        }
+
+        p {
+            font-size: 16px;
+            color: var(--Grey);
+        }
+    }
+
+    .person {
+        display: flex;
+        align-items: center;
+        margin-left: -210px;
+        font-size: 14px;
+        color: var(--Black);
+        font-weight: 800;
+        gap: 12px;
+
+        img {
+            width: 32px;
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .container {
+        width: 327px;
+        img {
+            width: 279px;
+        }
+        .content {
+            span {
+                font-size: 12px;
+            }
+            h2 {
+                font-size: 12px;
+            }
+            h1 {
+                font-size: 20px;
+            }
+            p {
+                font-size: 14px;
+            }
+        }
+        .person {
+            margin-left: -160px;
+        }
+    }
+}
