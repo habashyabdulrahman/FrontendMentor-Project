@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root {
+    --Nutmeg: hsl(14, 45%, 36%);
+    --Dark-Raspberry: hsl(332, 51%, 32%);
+    --White: hsl(0, 0%, 100%);
+    --Rose-White: hsl(330, 100%, 98%);
+    --Eggshell: hsl(30, 54%, 90%);
+    --Light-Grey: hsl(30, 18%, 87%);
+    --Wenge-Brown: hsl(30, 10%, 34%);
+    --Dark-Charcoal: hsl(24, 5%, 18%);
+}
+
+/* 
+font-family: "Outfit",sans-serif;
+font-family: "Young Serif",serif;
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    margin: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    img {
+        border-radius: 10px;
+    }
+
+    .hero {
+        h1 {
+            font-size: 55px;
+            font-family: "Young Serif",
+                serif;
+        }
+
+        p {
+            font-family: "Outfit",
+                sans-serif;
+            color: var(--Wenge-Brown);
+        }
+    }
+
+    .time {
+        padding: 40px;
+        background: var(--Rose-White);
+        font-family: "Outfit", sans-serif;
+
+        span {
+            font-size: 25px;
+            color: var(--Dark-Raspberry);
+            font-weight: 500;
+        }
+
+        ul {
+            margin-top: 15px;
+            list-style: none;
+
+            li {
+                strong {
+                    color: var(--Wenge-Brown);
+                }
+
+                color: var(--Wenge-Brown);
+                margin-bottom: 5px;
+                position: relative;
+                padding-left: 30px;
+            }
+
+            li::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 6px;
+                height: 6px;
+                background-color: var(--Dark-Raspberry);
+                border-radius: 50%;
+            }
+        }
+    }
+
+    .Ingredients {
+        font-family: "Outfit", sans-serif;
+
+        span {
+            font-size: 25px;
+            color: var(--Nutmeg);
+            font-weight: 500;
+            font-family: "Young Serif", serif;
+        }
+
+        ul {
+            margin-top: 15px;
+            list-style: none;
+
+            li {
+                margin-bottom: 10px;
+                color: var(--Wenge-Brown);
+                position: relative;
+                padding-left: 30px;
+            }
+
+            li::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 6px;
+                height: 6px;
+                background-color: var(--Dark-Raspberry);
+                border-radius: 50%;
+            }
+        }
+    }
+
+    .Instructions {
+        font-family: "Outfit", sans-serif;
+
+        span {
+            font-size: 25px;
+            color: var(--Nutmeg);
+            font-weight: 500;
+            font-family: "Young Serif", serif;
+        }
+
+        ol {
+            margin-top: 15px;
+            list-style: none;
+            counter-reset: item;
+
+            li {
+                margin-bottom: 10px;
+                color: var(--Wenge-Brown);
+                position: relative;
+                padding-left: 30px;
+            }
+
+            li::before {
+                counter-increment: item;
+                content: counter(item) ".";
+                position: absolute;
+                left: 0;
+                color: var(--Wenge-Brown);
+                font-weight: bold;
+            }
+        }
+    }
+
+    .Nutrition {
+        font-family: "Outfit", sans-serif;
+
+        span {
+            font-size: 25px;
+            color: var(--Nutmeg);
+            font-weight: 500;
+            font-family: "Young Serif", serif;
+        }
+
+        p {
+            margin: 20px 0;
+            color: var(--Wenge-Brown);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            color: var(--Wenge-Brown);
+            td {
+                padding: 10px;
+                border-bottom: 1px solid #ddd;
+            }
+
+            tr:last-child td {
+                border-bottom: none;
+            }
+
+            .value {
+                color: var(--Nutmeg);
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .container {
+        img {
+                border-radius: 0;
+                margin: -24px -24px 24px -24px;
+            }
+        .hero {
+            margin-bottom: 20px;
+            h1 {
+                font-size: 30px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
